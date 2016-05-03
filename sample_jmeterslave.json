@@ -1,0 +1,33 @@
+{
+  "id": "jmeter-slave",
+  "mem": 256,
+  "cpus": 0.3,
+  "instances":2,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "engci-docker.cisco.com:5915/prakhund/jmeter-slave",
+"forcePullImage":true,
+      "network": "BRIDGE",
+"portMappings":[
+{
+"containerPort":1099,
+"hostPort":0,
+"protocol":"tcp"
+},
+{
+"containerPort":60000,
+"hostPort":0,
+"protocol":"tcp"
+}
+],
+"parameters":[
+{
+"key":"net",
+"value":"weave"
+}
+]
+    }
+  },
+"constraints":[["hostname","UNIQUE"]]
+}
