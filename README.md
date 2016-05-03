@@ -3,7 +3,8 @@ JMETER SLAVES are the part of JMETER Distributed architecture for Docker. JMETER
 </br>
 <h3>Software Requirements:</h3>
 <p>1) A working cluster which is inclusive of Docker, Mesos(optional), Marathon(optional)</br>
-2) A Virtual Networking Tool like WEAVE (--net=weave means we are using the WEAVE here, you can replace it your's) </p>
+2) A Virtual Networking Tool like WEAVE (--net=weave means we are using the WEAVE here, you can replace it your's) 
+   </br>(To install the WEAVE visit https://github.com/weaveworks/weave )</p>
 </br>
 <h3> To Start The JMETER SLAVES: </h3>
 <p><b>By Docker Command:</b></br>
