@@ -11,8 +11,8 @@ This is not at all recommended as JMETER Master will get the details about Slave
 <code>
 sudo docker run --net=weave -d -p 0.0.0.0:1099:1099 -p 0.0.0.0:60000:60000 -v <absolute any host path to log>:/logs -v <absolute any host path to inputdata>:/inputdata 
 </code></p>
-
-<p><b>By Marathon Deployment:</b></br>
+<h3> OR </h3>
+<p><b>By Marathon Deployment (Recommended):</b></br>
 Edit the number instances required in the Marathon Json and deploy it on the Marathon. UNIQUE constraint is used, hence one SLAVE per VM is considered. The image is already pushed on the Artifactory, hence this json will pull that only. If you are building your own, then edit the Marathon json accordingly.</br>
 <code>curl -H "Accept: application/json" -H "Content-Type: application/json" http://<master-node>:8080/v2/apps --data @sample_jmeterslave.json</code></p>
 </br>
