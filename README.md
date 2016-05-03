@@ -6,8 +6,9 @@ JMETER SLAVES are the part of JMETER Distributed architecture for Docker. JMETER
 2) A Virtual Networking Tool like WEAVE (--net=weave means we are using the WEAVE here, you can replace it your's) </p>
 </br>
 <h3> To Start The JMETER SLAVES: </h3>
-<p><b>By Docker Command:</b>
-</br><code>
+<p><b>By Docker Command:</b></br>
+This is not at all recommended as JMETER Master will get the details about Slaves through the Marathon Server. Everything will go Manual, then.</br>
+<code>
 sudo docker run --net=weave -d -p 0.0.0.0:1099:1099 -p 0.0.0.0:60000:60000 -v <absolute any host path to log>:/logs -v <absolute any host path to inputdata>:/inputdata 
 </code></p>
 
