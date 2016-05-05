@@ -27,9 +27,12 @@ ADD jmeter.properties /var/lib/apache-jmeter-2.13/bin/
 # Expose access to logs & data files
 VOLUME [ "/logs" ]
 VOLUME [ "/input-data" ]
-
+VOLUME [ "/user_libs" ]
 # Expose jmeter-server's port (values dicated by those specified in jmeter.properties.
 EXPOSE 1099 60000
+
+# Provide all the dependent JARs
+COPY user_libs /user_libs/
 
 # Run jmeter-server 
 ENTRYPOINT [ "/var/lib/apache-jmeter-2.13/bin/jmeter-server" ]
