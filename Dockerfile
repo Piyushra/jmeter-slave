@@ -16,8 +16,8 @@
 # TODO - Currently exposed ports are hard-coded to use values that are in the jmeter.properties.
 #        It would be nice to be able to parameterize the port numbers.
 #
-FROM vaibhavja/jmeter-docker-base
-MAINTAINER Vaibhav
+FROM engci-docker.cisco.com:5915/prakhund/jmeter-base
+MAINTAINER Piyush
 
 # Describe the environment
 ENV JMETER_VERSION 2.13
